@@ -38,6 +38,13 @@ public class ProjectController {
      */
    
 
+   /**
+     * 根据id删除项目add！！！！
+     * @param projectEntity
+     * @return
+     */
+    
+    
     /**
      * 根据id删除项目
      * @param projectEntity
@@ -46,7 +53,9 @@ public class ProjectController {
     @RequestMapping(value = "/deleteProjectById",method = RequestMethod.POST, headers = "Accept=application/json")
     public HttpResponseEntity deleteProjectById(ProjectEntity projectEntity) {
         HttpResponseEntity httpResponseEntity = new HttpResponseEntity();
-           
+        
+        httpResponseEntity.setData(list);
+        
         return httpResponseEntity;
     }
     
