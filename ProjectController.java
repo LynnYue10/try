@@ -36,15 +36,7 @@ public class ProjectController {
      * @param projectEntity
      * @return
      */
-    @RequestMapping(value = "/queryProjectList",method = RequestMethod.POST, headers = "Accept=application/json")
-    public HttpResponseEntity queryProjectList(@RequestBody(required = false) ProjectEntity projectEntity) {
-        HttpResponseEntity httpResponseEntity = new HttpResponseEntity();
-        List<Object> list = projectService.queryProjectList(projectEntity);
-        httpResponseEntity.setCode(Constans.SUCCESS_CODE);
-        httpResponseEntity.setData(list);
-        httpResponseEntity.setMessage(Constans.STATUS_MESSAGE);
-        return httpResponseEntity;
-    }
+   
 
     /**
      * 根据id删除项目
@@ -55,6 +47,18 @@ public class ProjectController {
     public HttpResponseEntity deleteProjectById(ProjectEntity projectEntity) {
         HttpResponseEntity httpResponseEntity = new HttpResponseEntity();
            
+        return httpResponseEntity;
+    }
+    
+    
+    
+     @RequestMapping(value = "/queryProjectList",method = RequestMethod.POST, headers = "Accept=application/json")
+    public HttpResponseEntity queryProjectList(@RequestBody(required = false) ProjectEntity projectEntity) {
+        HttpResponseEntity httpResponseEntity = new HttpResponseEntity();
+        List<Object> list = projectService.queryProjectList(projectEntity);
+        httpResponseEntity.setCode(Constans.SUCCESS_CODE);
+        httpResponseEntity.setData(list);
+        httpResponseEntity.setMessage(Constans.STATUS_MESSAGE);
         return httpResponseEntity;
     }
 
