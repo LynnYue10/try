@@ -86,6 +86,7 @@ public class ProjectController {
         	/*
         	 * 新增项目到mysql
         	 * 
+             1111111111111111111111111111111111111111111111
         	projectEntity.setId(UUIDUtil.getOneUUID());
         	projectEntity.setCreationDate(new Date());
         	projectService.addProjectInfo(projectEntity, null);
@@ -103,7 +104,6 @@ public class ProjectController {
     @RequestMapping(value = "/modifyProjectInfo",method = RequestMethod.POST, headers = "Accept=application/json")
     public HttpResponseEntity modifyProjectInfo(@RequestBody ProjectEntity projectEntity) {
         HttpResponseEntity httpResponseEntity = new HttpResponseEntity();
-        111111111111111111    
         return httpResponseEntity;
     }
 
